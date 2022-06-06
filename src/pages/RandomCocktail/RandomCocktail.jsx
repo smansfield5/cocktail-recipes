@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import './RandomCocktail.css';
 
 export default function RandomCocktail() {
     const [cocktail, setCocktail] = useState([]);

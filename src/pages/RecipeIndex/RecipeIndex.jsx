@@ -1,4 +1,4 @@
-
+import './RecipeIndex.css'
 import React, { useState, useEffect } from "react";
 
 
@@ -12,6 +12,14 @@ export default function RecipeIndex() {
             setCocktail(data.drinks);
         })
     }, []);
+
+    async function handleDetails(e) {
+        e.preventDefault()
+
+
+
+    } 
+
     return (
         <div>
             <h1>Drinks</h1>
@@ -29,6 +37,7 @@ export default function RecipeIndex() {
                         <img src={strDrinkThumb} alt={strDrink}></img>
                         <h3>{strCategory}</h3>
                         <p>{strInstructions}</p>
+                        <button onClick={() => handleDetails(idDrink)}>Details</button>
                     </div>
                 )
             })}
