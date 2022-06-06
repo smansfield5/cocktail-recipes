@@ -16,7 +16,9 @@ export default function NavBar({ user, setUser }) {
       {/* <Link to="/">Home Page</Link> */}
       <Link to="/">Home</Link>
       &nbsp; | &nbsp;
-      <Link to="/app/index">Recipe Index</Link>
+      <Link to="/app/index">Cocktail Index</Link>
+      &nbsp; | &nbsp;
+      <Link to="/app/random">Random Cocktail</Link>
       &nbsp; | &nbsp;
       <Link to="/app/new">Add New Cocktail</Link>
       &nbsp; | &nbsp;

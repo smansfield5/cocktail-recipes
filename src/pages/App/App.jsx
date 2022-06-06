@@ -7,6 +7,7 @@ import './App.css';
 import NewRecipePage from '../NewRecipePage/NewRecipePage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import RecipeIndex from '../RecipeIndex/RecipeIndex'
+import RandomCocktail from '../RandomCocktail/RandomCocktail'
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             {/* Route components in here */}
             <Route path="/app/index" element={<RecipeIndex />} />
+            <Route path="/app/random" element={<RandomCocktail />} />
             <Route path="/app/new" element={<NewRecipePage />} />
             <Route path="/app" element={<OrderHistoryPage />} />
           </Routes>
