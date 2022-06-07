@@ -8,7 +8,8 @@ import NavBar from '../../components/NavBar/NavBar';
 import NewRecipePage from '../NewRecipePage/NewRecipePage';
 import CocktailDetailPage from '../CocktailDetailPage/CocktailDetailPage';
 import RecipeIndex from '../RecipeIndex/RecipeIndex'
-import RandomCocktail from '../RandomCocktail/RandomCocktail'
+import RandomCocktail from '../RandomCocktail/RandomCocktail' 
+// import DrinkCard from '../../components/DrinkCard'
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             <Route path="/index" element={<RecipeIndex />} />
             <Route path="/random" element={<RandomCocktail />} />
             <Route path="/new" element={<NewRecipePage />} />
-            <Route path="/detail/:id" element={<CocktailDetailPage />} />
+            <Route path="/detail/idDrink" element={<CocktailDetailPage />} />
           </Routes>
         </>
         :

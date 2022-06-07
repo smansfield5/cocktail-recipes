@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react';
-import App from '../../pages/App/App';
 
 
-export default function DrinkCard(drink) {
+
+export default function DrinkCard({drink}) {
     return (
         <div>
-            <Link to={`/detail/${idDrink} `}>
+            <Link to={`/detail/${drink.idDrink} `}>
                 <div>
-                <div key={data.idDrink}>
+                <div key={drink.idDrink}>
                         <h2>{drink.strDrink}</h2>
-                        <img src={strDrinkThumb} alt={strDrink}></img>
-                        <h3>{strCategory}</h3>
-                        <p>{strInstructions}</p>
+                        <img src={drink.strDrinkThumb} alt={drink.strDrink}></img>
+                        <h3>{drink.strCategory}</h3>
+                        <p>{drink.strInstructions}</p>
                     </div>
                 </div>
             </Link>
