@@ -14,13 +14,13 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav>
       {/* <Link to="/">Home Page</Link> */}
-      <Link to="/app">Home</Link>
+      <Link to="/">Home</Link>
       &nbsp; | &nbsp;
-      <Link to="/app/index">Cocktail Index</Link>
+      <Link to="/index">Cocktail Index</Link>
       &nbsp; | &nbsp;
-      <Link to="/app/random">Random Cocktail</Link>
+      <Link to="/random">Random Cocktail</Link>
       &nbsp; | &nbsp;
-      <Link to="/app/new">Add New Cocktail</Link>
+      <Link to="/new">Add New Cocktail</Link>
       &nbsp; | &nbsp;
       <span>Welcome, {user.name}</span>
       &nbsp; | &nbsp;

@@ -1,8 +1,9 @@
 import './RecipeIndex.css'
 import React, { useState, useEffect } from "react";
+import { Navigate } from 'react-router-dom';
 
 
-export default function RecipeIndex() {
+export default function RecipeIndex({handleDetails}) {
     const [cocktail, setCocktail] = useState([]);
     useEffect(() => {
         fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")
@@ -13,11 +14,8 @@ export default function RecipeIndex() {
         })
     }, []);
 
-    async function handleDetails(e) {
-        e.preventDefault()
-
-
-
+    function handleDetails() {
+    Navigate('/CocktailDetailPage')    
     } 
 
     return (
@@ -37,7 +35,7 @@ export default function RecipeIndex() {
                         <img src={strDrinkThumb} alt={strDrink}></img>
                         <h3>{strCategory}</h3>
                         <p>{strInstructions}</p>
-                        <button onClick={() => handleDetails(idDrink)}>Details</button>
+                        <button type="button" onClick={() => handleDetails(idDrink)}>Details</button>
                     </div>
                 )
             })}

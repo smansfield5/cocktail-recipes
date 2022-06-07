@@ -6,7 +6,7 @@ import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import NewRecipePage from '../NewRecipePage/NewRecipePage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+import CocktailDetailPage from '../CocktailDetailPage/CocktailDetailPage';
 import RecipeIndex from '../RecipeIndex/RecipeIndex'
 import RandomCocktail from '../RandomCocktail/RandomCocktail'
 
@@ -21,11 +21,11 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
-            <Route path="/app" element={<HomePage />} />
-            <Route path="/app/index" element={<RecipeIndex />} />
-            <Route path="/app/random" element={<RandomCocktail />} />
-            <Route path="/app/new" element={<NewRecipePage />} />
-            <Route path="/app" element={<OrderHistoryPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/index" element={<RecipeIndex />} />
+            <Route path="/random" element={<RandomCocktail />} />
+            <Route path="/new" element={<NewRecipePage />} />
+            <Route path="/detail/:id" element={<CocktailDetailPage />} />
           </Routes>
         </>
         :
