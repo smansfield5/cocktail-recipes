@@ -14,7 +14,7 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav>
       {/* <Link to="/">Home Page</Link> */}
-      <Link to="/">Home</Link>
+      <Link to="/app">Home</Link>
       &nbsp; | &nbsp;
       <Link to="/app/index">Cocktail Index</Link>
       &nbsp; | &nbsp;

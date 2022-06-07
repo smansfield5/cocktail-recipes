@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-
+import DrinkCard from "../../components/DrinkCard/DrinkCard";
 
 export default function CocktailDetailPage() {
-    const {cocktail}  = useParams();
+    const {cocktail}  = useParams({DrinkCard});
     const drink = idDrink.findById((d) => d.idDrink === cocktail);
     return (
         <div key={drink.idDrink}>
