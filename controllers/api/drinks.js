@@ -8,7 +8,7 @@ module.exports = {
 async function show(req, res) {
     const drink = await Drink.findOne({apiId: req.params.id});
     if (!drink) {
-        const drink = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${apiId: req.params.id}`).then((res) => res.json(drink))
+        const drink = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${req.params.id}`).then((res) => res.json(drink))
         console.log(drink)
     }
     res.json(drink);
