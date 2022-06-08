@@ -1,8 +1,9 @@
 import './RecipeIndex.css'
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
+//import * as drinksAPI from '../../controllers/api/drinks'
 
-export default function RecipeIndex({handleDetails}) {
+export default function RecipeIndex() {
     const [cocktail, setCocktail] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
@@ -16,7 +17,7 @@ export default function RecipeIndex({handleDetails}) {
 
     function handleDetails(e) {
         e.preventDefault()
-    navigate(`/detail/idDrink`)    
+    navigate(`/detail/:idDrink`)    
     } 
 
     return (

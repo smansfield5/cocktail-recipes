@@ -26,7 +26,7 @@ function App() {
             <Route path="/index" element={<RecipeIndex />} />
             <Route path="/random" element={<RandomCocktail />} />
             <Route path="/new" element={<NewRecipePage />} />
-            <Route path="/detail/idDrink" element={<CocktailDetailPage />} />
+            <Route path="/detail/:idDrink" element={<CocktailDetailPage />} />
           </Routes>
         </>
         :

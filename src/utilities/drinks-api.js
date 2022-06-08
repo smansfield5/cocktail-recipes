@@ -1,5 +1,5 @@
 import sendRequest from "./send-request";
-const BASE_URL = '/api/drink';
+const BASE_URL = '/api/drinks';
 
 
 
