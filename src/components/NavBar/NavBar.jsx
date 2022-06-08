@@ -12,19 +12,19 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <nav>
+    <nav className='navb' style={{color:"white"}}>
       {/* <Link to="/">Home Page</Link> */}
-      <Link to="/">Home</Link>
+      <Link style={{color:"black"}} to="/">Home</Link>
       &nbsp; | &nbsp;
-      <Link to="/index">Cocktail Index</Link>
+      <Link style={{color:"black"}} to="/index">Cocktail Index</Link>
       &nbsp; | &nbsp;
-      <Link to="/random">Random Cocktail</Link>
+      <Link style={{color:"black"}} to="/random">Random Cocktail</Link>
       &nbsp; | &nbsp;
-      <Link to="/new">Add New Cocktail</Link>
+      <Link style={{color:"black"}} to="/new">Add New Cocktail</Link>
       &nbsp; | &nbsp;
       <span>Welcome, {user.name}</span>
       &nbsp; | &nbsp;
-      <Link to="" onClick={handleLogOut}>Log Out</Link>
+      <Link style={{color:"black"}} to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
   );
 }

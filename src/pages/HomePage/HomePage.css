@@ -1,0 +1,23 @@
+nav {
+    background-color: #A3432F;
+    height: 100px;
+    border-radius: 15px;
+    border: 6px solid #3658A3;
+    font-size: 35px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Courgette', cursive;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+body {
+    background-color: #57332C;
+}
+
+.navb {
+    color: black !important;
+    text-decoration: none !important;
+}
