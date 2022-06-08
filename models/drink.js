@@ -6,6 +6,8 @@ const drinkSchema = new Schema({
     users:[{type: Schema.Types.ObjectId, ref: 'User'}],
     name: {type: String, required: true},
     ingredients: [{type: String}],  
+    image: {type: String},
+    instructions: {type: String}
 }, {
     timestamps: true,
 })

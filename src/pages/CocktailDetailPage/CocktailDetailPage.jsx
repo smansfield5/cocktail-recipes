@@ -14,14 +14,16 @@ export default function CocktailDetailPage() {
             setCocktail(drink);
         }
         getDrink();
-    });
-
+    }, []);
+    if (!cocktail) return null;
     return (
-        <div key={idDrink}>
-            <h2>{cocktail.strDrink}</h2>
-            <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink}></img>
-            <h3>{cocktail.strCategory}</h3>
-            <p>{cocktail.strInstructions}</p>
+        <div>
+            <h2>{cocktail.name}</h2>
+            <img src={cocktail.image} alt={cocktail.name}></img>
+            <ul>
+                {cocktail.ingredients.map(ing => <li key={ing}>{ing}</li>)}
+            </ul>
+            <p>{cocktail.instructions}</p>
         </div>
     );
 }

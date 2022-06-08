@@ -6,10 +6,25 @@ module.exports = {
 }
 
 async function show(req, res) {
-    const drink = await Drink.findOne({apiId: req.params.id});
+    let drink = await Drink.findOne({apiId: req.params.id});
     if (!drink) {
-        const drink = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${req.params.id}`).then((res) => res.json(drink))
-        console.log(drink)
+        drink = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${req.params.id}`).then((res) => res.json())
+        drink = drink.drinks[0];
+        console.log(drink);
+        const newDrink = {
+            apiId: drink.idDrink,
+            name: drink.strDrink,
+            ingredients: [],
+            image: drink.strDrinkThumb,
+            instructions: drink.strInstructions
+        };
+        for (let i = 1; i < 16; i++) {
+            const key = `strIngredient${i}`;
+            if (drink[key] === null) break;
+            const measure = drink[`strMeasure${i}`];
+            newDrink.ingredients.push(`${measure || ''} - ${drink[key]}`);
+        }
+        drink = await Drink.create(newDrink);
     }
     res.json(drink);
 }

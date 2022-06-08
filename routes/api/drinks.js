@@ -3,6 +3,7 @@ const router = express.Router();
 const drinksCtrl = require('../../controllers/api/drinks');
 
 //router.get('/', drinksCtrl.index);
-router.get('/:idDrink', drinksCtrl.show);
+// GET /api/drinks/:id
+router.get('/:id', drinksCtrl.show);
 
 module.exports = router;

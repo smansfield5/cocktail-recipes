@@ -15,9 +15,8 @@ export default function RecipeIndex() {
         })
     }, []);
 
-    function handleDetails(e) {
-        e.preventDefault()
-    navigate(`/detail/:idDrink`)    
+    function handleDetails(idDrink) {
+        navigate(`/detail/${idDrink}`);    
     } 
 
     return (
@@ -37,7 +36,7 @@ export default function RecipeIndex() {
                         <img src={strDrinkThumb} alt={strDrink}></img>
                         <h3>{strCategory}</h3>
                         <p>{strInstructions}</p>
-                        <button onClick={handleDetails}>Details</button>
+                        <button onClick={() => handleDetails(idDrink)}>Details</button>
                     </div>
                 )
             })}
