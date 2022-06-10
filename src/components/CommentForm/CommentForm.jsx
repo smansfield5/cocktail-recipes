@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import * as drinksAPI from '../../utilities/drinks-api'
-//import PostListPage from "../../pages/PostListPage/PostList";
+import * as postsAPI from '../../utilities/posts-api'
 
 export default function CommentForm() {
     const [comment, setComment] = useState('');
@@ -20,7 +20,7 @@ export default function CommentForm() {
     async function handleAddComment(e) {
         e.preventDefault();
         const payload = {comment, rating};
-        await drinksAPI.add(payload);      
+        await postsAPI.add(payload);      
         Navigate('/detail/:id')
     }
 

@@ -1,10 +1,10 @@
-// const express = require('express');
-// const router = express.Router();
-// const postsCtrl = require('../../controllers/api');
-// //const { router } = require('./users');
+const express = require('express');
+const router = express.Router();
+const postsCtrl = require('../../controllers/api/posts');
+//const { router } = require('./users');
 
-// router.get('/', postsCtrl.getAll);
+router.get('/', postsCtrl.getAll);
 
-// router.post('/:id', postsCtrl.create);
+router.post('/:id', postsCtrl.create);
 
-// module.exports = router
+module.exports = router
