@@ -8,6 +8,8 @@ export default function CommentForm({handleAddComment}) {
     function handleSubmit(evt) {
         evt.preventDefault();
         handleAddComment({comment: newComment, rating});
+        setNewComment('');
+        setRating('5');
     }
 
     return (

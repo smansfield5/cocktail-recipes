@@ -1,5 +1,5 @@
-export default function Comments({cocktail}) {
+export default function Comments({cocktail, handleDeleteComment}) {
     return (
-        cocktail.comments.map(c => <p>{c.comment}</p>)
+        cocktail.comments.map(c => <p>{c.comment}<button onClick={() => handleDeleteComment(c._id)} >X</button></p>)
     )
 }

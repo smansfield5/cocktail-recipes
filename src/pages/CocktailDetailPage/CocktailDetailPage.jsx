@@ -14,6 +14,10 @@ export default function CocktailDetailPage({handleAddComment}) {
         const updatedCocktail = await commentsAPI.add(comment, cocktail._id);
         setCocktail(updatedCocktail);
     }
+    async function handleDeleteComment(id) {
+        const updatedCocktail = await commentsAPI.deleteComment(id);
+        setCocktail(updatedCocktail);
+    }
 
     useEffect(function() {
         async function getDrink() {
@@ -33,7 +37,7 @@ export default function CocktailDetailPage({handleAddComment}) {
             </ul>
             <p>{cocktail.instructions}</p>
         </div>
-        <Comments cocktail={cocktail} />
+        <Comments cocktail={cocktail} handleDeleteComment={handleDeleteComment} />
 
         <CommentForm handleAddComment={handleAddComment} />
         
