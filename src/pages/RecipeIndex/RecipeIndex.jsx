@@ -26,16 +26,14 @@ export default function RecipeIndex() {
                 const {
                     idDrink,
                     strDrink,
-                    strCategory,
+                    //strCategory,
                     strDrinkThumb,
-                    strInstructions
+                    //strInstructions
                 } = drink;
                 return (
                     <div key={idDrink}>
                         <h2>{strDrink}</h2>
-                        <img src={strDrinkThumb} alt={strDrink}></img>
-                        <h3>{strCategory}</h3>
-                        <p>{strInstructions}</p>
+                        <img src={strDrinkThumb} alt={strDrink}></img><br />
                         <button onClick={() => handleDetails(idDrink)}>Details</button>
                     </div>
                 )

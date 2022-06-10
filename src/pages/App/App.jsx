@@ -28,7 +28,7 @@ function App() {
             <Route path="/random" element={<RandomCocktail />} />
             <Route path="/new" element={<NewRecipePage />} />
             <Route path="/detail/:idDrink" element={<CocktailDetailPage />} />
-            <Route path="/favorites" element={<FavoritePage />} />
+            {/* <Route path="/favorites" element={<FavoritePage />} /> */}
           </Routes>
         </>
         :

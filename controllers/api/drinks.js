@@ -3,6 +3,8 @@ const fetch = require('node-fetch');
 
 module.exports = {
    show,
+   getAll,
+   create
 }
 
 async function show(req, res) {
@@ -27,4 +29,17 @@ async function show(req, res) {
         drink = await Drink.create(newDrink);
     }
     res.json(drink);
+}
+
+async function getAll(req, res) {
+    const posts = await PostListPage.find({
+        user: req.user._id 
+    })
+    res.json(posts);
+}
+
+async function create(req, res) {
+    req.body.user = req.user_.id
+    const post = await post.create(req.body);
+    res.json(post);
 }

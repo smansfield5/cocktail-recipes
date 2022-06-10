@@ -3,9 +3,11 @@ export default function NewRecipePage() {
     <>
     <h1>NewRecipePage</h1>
     <form >
+      <h3>Image</h3>
+      <input type="file" />
       <h3>Name of Cocktail</h3>
       <input type="text" placeholder="Cocktail Name" />
-      <h3>Select Liquor</h3>
+      <h3>Liquor</h3>
       <select name="" id="Liquor">
         <option value="whisky">Whisky</option>
         <option value="vodka">Vodka</option>
@@ -24,6 +26,7 @@ export default function NewRecipePage() {
       </select>
       <h3>Instructions</h3>
       <textarea placeholder="Instructions" name="instructions" id="" cols="30" rows="10"></textarea>
+      <button type="submit">Add Cocktail</button>
     </form>
     </>
   );

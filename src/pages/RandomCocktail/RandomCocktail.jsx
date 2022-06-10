@@ -20,6 +20,7 @@ export default function RandomCocktail() {
                     strDrink,
                     strCategory,
                     strDrinkThumb,
+                    strMeasure1,
                     strInstructions
                 } = drink;
                 return (
@@ -27,6 +28,7 @@ export default function RandomCocktail() {
                         <h2>{strDrink}</h2>
                         <img src={strDrinkThumb} alt={strDrink}></img>
                         <h3>{strCategory}</h3>
+                        <h3>{strMeasure1}</h3>
                         <p>{strInstructions}</p>
                     </div>
                 )

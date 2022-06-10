@@ -26,6 +26,7 @@ app.use('/api/users', require('./routes/api/users'));
 const ensureLoggedIn = require('./config/ensureLoggedIn');
 
 app.use('/api/drinks', ensureLoggedIn, require('./routes/api/drinks'));
+//app.use('/api/posts', ensureLoggedIn, require('./routes/api/pos'));
 
 //app.use('/api/favorites', ensureLoggedIn, require('./routes/api/favorites'));
 
@@ -40,3 +41,4 @@ const port = process.env.PORT || 3001;
 app.listen(port, function() {
   console.log(`Express app running on port ${port}`);
 });
+
