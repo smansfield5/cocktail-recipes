@@ -9,8 +9,6 @@ import NewRecipePage from '../NewRecipePage/NewRecipePage';
 import CocktailDetailPage from '../CocktailDetailPage/CocktailDetailPage';
 import RecipeIndex from '../RecipeIndex/RecipeIndex'
 import RandomCocktail from '../RandomCocktail/RandomCocktail' 
-import FavoritePage from '../FavoritePage/FavoritePage';
-// import DrinkCard from '../../components/DrinkCard'
 
 
 function App() {
@@ -28,7 +26,6 @@ function App() {
             <Route path="/random" element={<RandomCocktail />} />
             <Route path="/new" element={<NewRecipePage />} />
             <Route path="/detail/:idDrink" element={<CocktailDetailPage />} />
-            {/* <Route path="/favorites" element={<FavoritePage />} /> */}
           </Routes>
         </>
         :

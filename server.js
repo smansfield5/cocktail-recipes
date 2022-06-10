@@ -26,7 +26,7 @@ app.use('/api/users', require('./routes/api/users'));
 const ensureLoggedIn = require('./config/ensureLoggedIn');
 
 app.use('/api/drinks', ensureLoggedIn, require('./routes/api/drinks'));
-app.use('/api/posts', require('./routes/api/posts'));
+app.use('/api',ensureLoggedIn, require('./routes/api/comments'));
 
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above

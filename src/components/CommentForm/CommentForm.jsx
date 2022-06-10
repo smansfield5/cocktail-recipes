@@ -1,44 +1,32 @@
-//import { useState } from "react";
+import { useState } from "react";
 
-import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
-import * as drinksAPI from '../../utilities/drinks-api'
-import * as postsAPI from '../../utilities/posts-api'
 
-export default function CommentForm() {
-    const [comment, setComment] = useState('');
-    const [rating, setRating] = useState('');
-    
-    useEffect(function() {
-        async function getPosts() {
-            const comment = await drinksAPI.getAll();
-            setComment(comment);
-        }
-        getPosts()
-    }, []);
-    
-    async function handleAddComment(e) {
-        e.preventDefault();
-        const payload = {comment, rating};
-        await postsAPI.add(payload);      
-        Navigate('/detail/:id')
+export default function CommentForm({handleAddComment}) {
+    const [newComment, setNewComment] = useState('');
+    const [rating, setRating] = useState('5');
+
+    function handleSubmit(evt) {
+        evt.preventDefault();
+        handleAddComment({comment: newComment, rating});
     }
 
     return (
         <>
         <br />
-        <form onSubmit={handleAddComment}>
+        <form onSubmit={handleSubmit}>
             <h2>Comments</h2><br />
             <textarea 
-            onChange={e => setComment(e.target.value)}
-            value={comment} 
-            placeholder="Comments"
-            name="comments" 
+            onChange={(evt) => setNewComment(evt.target.value)}
+            value={newComment} 
+            placeholder="Comments" 
             cols="30" rows="10"></textarea>
             <br />
             <h2>Rating</h2>
             <br />
-            <select name="" id="">
+            <select 
+            value={rating}
+            onChange={(evt) => setRating(evt.target.value)}
+            >
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
