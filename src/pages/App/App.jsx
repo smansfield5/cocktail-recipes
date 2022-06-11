@@ -5,7 +5,6 @@ import './App.css';
 import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
-import NewRecipePage from '../NewRecipePage/NewRecipePage';
 import CocktailDetailPage from '../CocktailDetailPage/CocktailDetailPage';
 import RecipeIndex from '../RecipeIndex/RecipeIndex'
 import RandomCocktail from '../RandomCocktail/RandomCocktail' 
@@ -24,7 +23,6 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/index" element={<RecipeIndex />} />
             <Route path="/random" element={<RandomCocktail />} />
-            <Route path="/new" element={<NewRecipePage />} />
             <Route path="/detail/:idDrink" element={<CocktailDetailPage />} />
           </Routes>
         </>

@@ -1,17 +1,10 @@
-img{
-    height: 75vmin;
-    width: 60vmin;
-    border: 2px solid black;
-    border-radius: 7px;
-}
-
-.RandomCocktailPage {
+.CocktailDetailPage {
     display: block;
-    border: 3px solid black;
+    border: 10px solid black;
     border-radius: 15px;
     width: 400px;
     height: 400px;
-    background-color: #3658A3;
+    background-color: beige;
     color: black;
     text-decoration: underline;
     justify-self: center;

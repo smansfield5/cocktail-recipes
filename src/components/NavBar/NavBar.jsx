@@ -20,11 +20,7 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <Link style={{color:"black"}} to="/random">Random Cocktail</Link>
       &nbsp; | &nbsp;
-      <Link style={{color:"black"}} to="/new">Add New Cocktail</Link>
-      &nbsp; | &nbsp;
-      {/* <Link style={{color:"black"}} to="/favorites">My Favorite Cocktails</Link> */}
-      {/* &nbsp; | &nbsp; */}
-      <span>Welcome, {user.name}</span>
+      <span style={{textDecoration:"underline"}} >Welcome, {user.name}</span>
       &nbsp; | &nbsp;
       <Link style={{color:"black"}} to="" onClick={handleLogOut}>Log Out</Link>
     </nav>

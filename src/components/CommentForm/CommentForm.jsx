@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './CommentForm.css'
 
 
 export default function CommentForm({handleAddComment}) {
@@ -15,16 +16,16 @@ export default function CommentForm({handleAddComment}) {
     return (
         <>
         <br />
-        <form onSubmit={handleSubmit}>
-            <h2>Comments</h2><br />
+        <form
+        className="CommentForm"
+        onSubmit={handleSubmit}>
+            <h2>Comments</h2>
             <textarea 
             onChange={(evt) => setNewComment(evt.target.value)}
             value={newComment} 
             placeholder="Comments" 
-            cols="30" rows="10"></textarea>
-            <br />
+            cols="40" rows="5"></textarea>
             <h2>Rating</h2>
-            <br />
             <select 
             value={rating}
             onChange={(evt) => setRating(evt.target.value)}

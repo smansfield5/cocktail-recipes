@@ -4,6 +4,7 @@ import CommentForm from "../../components/CommentForm/CommentForm";
 import Comments from "../../components/Comments";
 import * as commentsAPI from "../../utilities/comments-api";
 import * as drinksAPI from '../../utilities/drinks-api';
+import './CocktailDetailPage.css';
 
 
 export default function CocktailDetailPage({handleAddComment}) {
@@ -32,10 +33,13 @@ export default function CocktailDetailPage({handleAddComment}) {
         <div>
             <h2>{cocktail.name}</h2>
             <img src={cocktail.image} alt={cocktail.name}></img>
+            <br /><br /><br />
+            <div className="CocktailDetailPage">
             <ul>
                 {cocktail.ingredients.map(ing => <li key={ing}>{ing}</li>)}
             </ul>
             <p>{cocktail.instructions}</p>
+            </div>
         </div>
         <Comments cocktail={cocktail} handleDeleteComment={handleDeleteComment} />
 
