@@ -1,6 +1,4 @@
-# MERN-Stack Infrastructure
-
-Cocktail Recipe App
+#Cocktail Recipe App
 
 Built consuming a cocktail API. Logged in users can browse cocktail recipes and leave comments on different recipes. They can also delete their own comments.
 
@@ -9,7 +7,6 @@ Delpoyed link: https://cocktail-db-sei.herokuapp.com/
 Trello link: https://trello.com/b/TRhBgK
 
 <img width="1424" alt="Screen Shot 2022-06-13 at 8 39 43 AM" src="https://user-images.githubusercontent.com/98561115/173380557-be172fc9-a9ed-4f2b-b09c-bbc125b3f2ff.png">
-jf/cocktail-app
 
 <img width="723" alt="Screen Shot 2022-06-13 at 8 39 55 AM" src="https://user-images.githubusercontent.com/98561115/173380603-db5e3119-dfda-41a4-9ce0-79bdb5138623.png">
 
