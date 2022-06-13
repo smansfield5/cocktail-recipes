@@ -30,7 +30,7 @@ export default function CocktailDetailPage({handleAddComment}) {
     if (!cocktail) return null; 
     return (
         <>
-        <div>
+        <div className="cdp">
             <h2>{cocktail.name}</h2>
             <img src={cocktail.image} alt={cocktail.name}></img>
             <br /><br /><br />

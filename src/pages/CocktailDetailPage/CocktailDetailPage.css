@@ -1,5 +1,5 @@
 .CocktailDetailPage {
-    display: block;
+    display: grid;
     border: 10px solid black;
     border-radius: 15px;
     width: 400px;
@@ -9,4 +9,10 @@
     text-decoration: underline;
     justify-self: center;
     align-self: center;
+}
+
+.cdp {
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }

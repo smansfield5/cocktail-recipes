@@ -16,29 +16,31 @@ export default function CommentForm({handleAddComment}) {
     return (
         <>
         <br />
-        <form
-        className="CommentForm"
-        onSubmit={handleSubmit}>
-            <h2>Comments</h2>
-            <textarea 
-            onChange={(evt) => setNewComment(evt.target.value)}
-            value={newComment} 
-            placeholder="Comments" 
-            cols="40" rows="5"></textarea>
-            <h2>Rating</h2>
-            <select 
-            value={rating}
-            onChange={(evt) => setRating(evt.target.value)}
-            >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-            <br />
-            <button type="submit">Submit Comment</button>
-        </form>
+        <section className="CommentFormSection">
+            <form
+            className="CommentForm"
+            onSubmit={handleSubmit}>
+                <h2>Comments</h2>
+                <textarea 
+                onChange={(evt) => setNewComment(evt.target.value)}
+                value={newComment} 
+                placeholder="Comments" 
+                cols="40" rows="5"></textarea>
+                <h2>Rating</h2>
+                <select 
+                value={rating}
+                onChange={(evt) => setRating(evt.target.value)}
+                >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <br />
+                <button type="submit">Submit Comment</button>
+            </form>
+        </section>
         </>
     )
 }

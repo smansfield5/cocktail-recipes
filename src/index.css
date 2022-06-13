@@ -82,6 +82,9 @@ code {
   background-color: var(--tan-1);
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
 }
 
 p.error-message {

@@ -24,14 +24,14 @@ export default function RandomCocktail() {
                     strInstructions
                 } = drink;
                 return (
-                    <div key={idDrink}>
+                    <div className="Container" key={idDrink}>
                         <img src={strDrinkThumb} alt={strDrink}></img>
                         <br /><br />
                         <div className="RandomCocktailPage"> 
-                        <h2>{strDrink}</h2>
-                        <h3>{strCategory}</h3>
-                        <h3>{strMeasure1}</h3>
-                        <p>{strInstructions}</p>
+                            <h2>{strDrink}</h2>
+                            <h3>{strCategory}</h3>
+                            <h3>{strMeasure1}</h3>
+                            <p>{strInstructions}</p>
                         </div>
                     </div>
                 )

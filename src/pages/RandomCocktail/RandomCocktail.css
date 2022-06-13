@@ -6,14 +6,21 @@ img{
 }
 
 .RandomCocktailPage {
-    display: block;
+    display: grid;
+    justify-content: center;
+    align-content: center;
     border: 3px solid black;
     border-radius: 15px;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     background-color: #3658A3;
     color: black;
     text-decoration: underline;
-    justify-self: center;
-    align-self: center;
+}
+
+.Container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
 }

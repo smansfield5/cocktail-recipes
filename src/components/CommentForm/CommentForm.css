@@ -10,3 +10,7 @@
     justify-self: center;
     align-self: center;
 }
+
+.CommentFormSection {
+    display: grid;
+}
