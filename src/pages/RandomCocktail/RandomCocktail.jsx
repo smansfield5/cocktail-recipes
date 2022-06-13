@@ -21,7 +21,8 @@ export default function RandomCocktail() {
                     strCategory,
                     strDrinkThumb,
                     strMeasure1,
-                    strInstructions
+                    strInstructions,
+                    strIngredient
                 } = drink;
                 return (
                     <div className="Container" key={idDrink}>
@@ -29,6 +30,7 @@ export default function RandomCocktail() {
                         <br /><br />
                         <div className="RandomCocktailPage"> 
                             <h2>{strDrink}</h2>
+                            <h3>{strIngredient}</h3>
                             <h3>{strCategory}</h3>
                             <h3>{strMeasure1}</h3>
                             <p>{strInstructions}</p>
