@@ -1,9 +1,9 @@
 
 nav {
-    background-color: #A3432F;
+    background-color: rgb(181, 177, 177);
     height: 140px;
     border-radius: 15px;
-    border: 6px solid #3658A3;
+    border: 6px solid darkred;
     font-size: 35px;
     display: flex;
     justify-content: center;

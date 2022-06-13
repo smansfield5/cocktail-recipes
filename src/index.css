@@ -23,6 +23,7 @@ body {
   background-color: var(--tan-4);
   padding: 2vmin;
   height: 100vh;
+  background-color: black;
 }
 
 code {

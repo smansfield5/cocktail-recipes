@@ -9,11 +9,11 @@ img{
     display: grid;
     justify-content: center;
     align-content: center;
-    border: 3px solid black;
+    border: 5px solid #3658A3;
     border-radius: 15px;
     width: 450px;
     height: 450px;
-    background-color: #3658A3;
+    background-color: rgb(181, 177, 177);
     color: black;
     text-decoration: underline;
 }
@@ -22,5 +22,10 @@ img{
     display: grid;
     justify-content: center;
     align-items: center;
-    
+}
+
+body {
+    color: darkred;
+   
+    font-family: 'Caveat Brush', cursive;
 }

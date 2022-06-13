@@ -1,10 +1,10 @@
 .CocktailDetailPage {
     display: grid;
-    border: 10px solid black;
+    border: 5px solid #3658A3;
     border-radius: 15px;
     width: 400px;
     height: 400px;
-    background-color: beige;
+    background-color: rgb(181, 177, 177);
     color: black;
     text-decoration: underline;
     justify-self: center;
@@ -15,4 +15,17 @@
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.Comments {
+    display: grid;
+    border: 5px solid #3658A3;
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(181, 177, 177);
+    color: black;
+    text-decoration: underline;
+    justify-self: center;
+    align-self: center;
 }

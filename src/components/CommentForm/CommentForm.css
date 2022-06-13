@@ -1,10 +1,10 @@
 .CommentForm {
     display: block;
-    border: 3px solid black;
+    border: 5px solid #3658A3;
     border-radius: 15px;
     width: 400px;
     height: 400px;
-    background-color: #3658A3;
+    background-color: rgb(181, 177, 177);
     color: black;
     text-decoration: underline;
     justify-self: center;

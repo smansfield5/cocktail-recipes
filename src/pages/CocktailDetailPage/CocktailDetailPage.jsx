@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CommentForm from "../../components/CommentForm/CommentForm";
-import Comments from "../../components/Comments";
+import Comments from "../../components/Comments/Comments";
 import * as commentsAPI from "../../utilities/comments-api";
 import * as drinksAPI from '../../utilities/drinks-api';
 import './CocktailDetailPage.css';
@@ -41,9 +41,9 @@ export default function CocktailDetailPage({handleAddComment}) {
             <p>{cocktail.instructions}</p>
             </div>
         </div>
-        <Comments cocktail={cocktail} handleDeleteComment={handleDeleteComment} />
 
         <CommentForm handleAddComment={handleAddComment} />
+        <Comments cocktail={cocktail} handleDeleteComment={handleDeleteComment} />
         
         </>
     );
